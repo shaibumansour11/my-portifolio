@@ -1,8 +1,9 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { FiMail } from "react-icons/fi";
 import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export default function FloatingContactButton() {
   const router = useRouter();
@@ -77,7 +78,7 @@ export default function FloatingContactButton() {
           width: isMobile ? "45px" : "55px",
           height: isMobile ? "45px" : "55px",
           borderRadius: "50%",
-          background: "linear-gradient(135deg, #0d1f3c 0%, #1a3b6d 100%)", // dark blue gradient
+          background: "linear-gradient(135deg, #0d1f3c 0%, #1a3b6d 100%)",
           color: "#fff",
           display: "flex",
           alignItems: "center",
@@ -92,7 +93,12 @@ export default function FloatingContactButton() {
           overflow: "visible",
         }}
       >
-        <FiMail size={isMobile ? 20 : 24} />
+        {/* Font Awesome Mail Icon */}
+        <FontAwesomeIcon
+          icon={faEnvelope}
+          width={isMobile ? 20 : 24}
+          height={isMobile ? 20 : 24}
+        />
 
         {/* Glow trail effect */}
         {hovered && (
