@@ -57,7 +57,7 @@ export default function RootLayout({ children }) {
         {/* Floating contact button visible on all pages */}
         <FloatingContactButton />
 
-        <Analytics />
+        {/* <Analytics /> */}
       </body>
     </html>
   );
